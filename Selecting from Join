@@ -1,0 +1,8 @@
+SELECT A.film_id,
+A.rental_duration,
+A.rental_rate,
+A.rating,
+C.name AS genre
+FROM film A
+INNER JOIN film_category B ON A.film_id=B.film_id
+INNER JOIN category C ON B.category_id=C.category_id
